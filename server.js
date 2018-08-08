@@ -29,9 +29,9 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use((req, res, next) => {
-    res.render('maintenance.hbs');
-});
+// app.use((req, res, next) => {
+//     res.render('maintenance.hbs');
+// });
 
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
@@ -54,6 +54,13 @@ app.get('/info', (req, res) => {
         name: 'VishnuVijay',
         age: '25',
         errorMessage: 'Bad Boy'
+    });
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'projects',
+        name: 'VishnuVijay'
     });
 });
 
